@@ -1,0 +1,19 @@
+#  Flappy Bird Project
+#### Video Demo: https://youtube.com/shorts/PwjnPhUH6sU?feature=share
+#### Description:The Flappy Bird Project is a web-based implementation of the popular game flappy bird. It is a project in which we have used a bird that has to avoid obstacles (i.e.- pipes) and go through them by using basic movement controls of up and down. The pipes change location and the bird has to move to go through them in order to avoid getting the message of game over. The bird gets a score of +1 for each pipe it passes and a high score is reported of all the attempts that you have tried in the game.
+The project has been created by using various files:
+1.	**Index.html** :- This file contains the basic game structure. This basically contains the page that the user sees when they first launch the web-based application. It has the start button that starts the game. It also includes the score and high score. It has the game container where bird and pipes are rendered.
+2.	**style.css** :- This file is used to give style to the game. It gives design to the bird and the pipes making them yellow and green, describing their dimensions, describing their positions are relative and absolute, etc. It also describes how the score and high score are to be displayed so as to they are easily readable and visible in the game. It also includes hover effects to the start game button.
+3.	**game.js** :- This is the JavaScript file in the game which includes the game logic. It introduces the mechanism of bird movement where the arrow up key moves the bird up on the screen or the arrow down key moves the bird down on the screen updating their positions. It also generates the pipes placing them at random places on the screen so the player is required to move their bird in order to pass the pipes and not only go in a straight line diminishing the purpose of the game. It also implements the collision detection that ends the game when the bird touches the ground or is unable to pass the pipes. It keeps track of the scoring of the game when the bird passes a pipe adding a score of +1 to the score.
+4.	**app.py** :-  This is the backend of the project handled by Flask. When a user visits the game flask retrieves the index.html file for the user along with the other files required to run the game. It also is used to interact with the SQL database to change the high score manage score entries in the database.
+5.	**scores.db** :- This is the SQLite database created in order to store the game high score. It’s a simple database which has a single database with a single column of high score which holds a single entry of the highest score achieved.
+
+We used Flask here to simply set up and provide an interface for handling HTTP requests. For a small scale project, Flask had all the required functionality to complete the project.
+
+We used an SQLite database to store high scores. And SQLite was enough as the project did not need a complex database system rather a simple database with a single table to store the high scores.
+
+While researching for tools to implement in the game, I stumbled upon the concept of AJAX which is a complex feature to getting high score without refreshing the page but using a simple logic to store high scores and display them seemed to be the better option as it is simpler and easier to maintain and did not require an in-depth complex topic to be learned which can be solved simply.
+
+For the pipes, I used a randomization function to provide a game where the game is a bit more challenging rather than going through a bunch of pipes in a line requiring a user input and adding the required adrenaline rush to make it attractive to the audience.
+
+A game loop interval was implemented ( 20 milliseconds) to update positions of pipes regularly ensuring smooth movement of pipes and birds.

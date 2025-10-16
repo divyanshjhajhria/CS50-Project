@@ -1,0 +1,68 @@
+#game-container {
+    width: 500px;
+    height: 700px;
+    border: 2px solid #000;
+    background-color: #87CEEB;
+    position: relative;
+    overflow: hidden;
+    margin: 40px auto;
+    font-family: Arial, sans-serif;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+}
+
+#bird {
+    width: 40px;
+    height: 40px;
+    background-color: #FFD700;
+    border-radius: 50%;
+    position: absolute;
+    left: 120px;
+    top: 320px;
+    transition: top 0.1s;
+}
+
+.pipe {
+    width: 60px;
+    background-color: #228B22;
+    position: absolute;
+}
+
+#pipe-top {
+    top: 0;
+}
+
+#pipe-bottom {
+    bottom: 0;
+}
+
+#score, #high-score {
+    font-size: 30px;
+    color: #fff;
+    position: absolute;
+    top: 10px;
+}
+
+#score {
+    left: 20px;
+}
+
+#high-score {
+    right: 20px;
+}
+
+
+#startButton {
+    display: block;
+    margin: 20px auto;
+    padding: 20px 30px;
+    font-size: 25px;
+    background-color: #FFD700;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#startButton:hover {
+    background-color: #FFEC8B;
+}
